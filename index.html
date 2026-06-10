@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especialidad de Programación</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background: linear-gradient(135deg,#0f172a,#1e293b,#0f172a);
+            color:white;
+            min-height:100vh;
+        }
+
+        header{
+            text-align:center;
+            padding:60px 20px;
+        }
+
+        h1{
+            font-size:3rem;
+            margin-bottom:15px;
+            color:#38bdf8;
+        }
+
+        .subtitulo{
+            font-size:1.2rem;
+            color:#cbd5e1;
+        }
+
+        .hero{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-wrap:wrap;
+            gap:30px;
+            padding:40px 20px;
+        }
+
+        .card{
+            background:rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            border-radius:20px;
+            padding:25px;
+            width:280px;
+            text-align:center;
+            transition:0.3s;
+            border:1px solid rgba(255,255,255,0.1);
+        }
+
+        .card:hover{
+            transform:translateY(-10px);
+            box-shadow:0 0 20px #38bdf8;
+        }
+
+        .icono{
+            font-size:50px;
+            margin-bottom:15px;
+        }
+
+        .card h2{
+            color:#38bdf8;
+            margin-bottom:10px;
+        }
+
+        .seccion{
+            text-align:center;
+            padding:50px 20px;
+        }
+
+        .boton{
+            display:inline-block;
+            margin-top:20px;
+            padding:15px 30px;
+            background:#38bdf8;
+            color:#0f172a;
+            text-decoration:none;
+            border-radius:30px;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        .boton:hover{
+            background:white;
+        }
+
+        footer{
+            text-align:center;
+            padding:25px;
+            color:#94a3b8;
+            margin-top:30px;
+        }
+
+        .contador{
+            font-size:3rem;
+            color:#22c55e;
+            margin-top:15px;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>💻 Especialidad de Programación</h1>
+        <p class="subtitulo">
+            ¡Bienvenidos al laboratorio de computación!
+        </p>
+    </header>
+
+    <section class="hero">
+
+        <div class="card">
+            <div class="icono">🖥️</div>
+            <h2>Hardware</h2>
+            <p>
+                Conoce el interior de un computador y descubre para qué sirve cada componente.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icono">👨‍💻</div>
+            <h2>Programación</h2>
+            <p>
+                Aprende cómo los programadores crean páginas web, aplicaciones y videojuegos.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icono">🚀</div>
+            <h2>Futuro Digital</h2>
+            <p>
+                La tecnología está presente en todas las áreas del mundo moderno.
+            </p>
+        </div>
+
+    </section>
+
+    <section class="seccion">
+        <h2>¿Sabías que...?</h2>
+        <p style="margin-top:15px;">
+            Cada segundo miles de líneas de código son escritas en todo el mundo.
+        </p>
+
+        <div class="contador" id="contador">0</div>
+
+        <a href="#" class="boton">¡Quiero aprender Programación!</a>
+    </section>
+
+    <footer>
+        Visita de 8° Básico • Especialidad de Programación
+    </footer>
+
+    <script>
+        let numero = 0;
+
+        setInterval(() => {
+            numero += Math.floor(Math.random() * 50) + 1;
+            document.getElementById("contador").textContent = numero;
+        }, 200);
+    </script>
+
+</body>
+</html>
